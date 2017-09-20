@@ -19,6 +19,7 @@
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery.libs.min.js"></script>
   <script type="text/javascript" src="js/pelicanpawn-scripts.js"></script>
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,6 +27,13 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+  <!--[if gte IE 9]
+    <style type="text/css">
+      .shadow-gradient {
+        filter: none;
+      }
+    </style>
+  <![endif]-->
 </head>
 
 <body>
@@ -104,9 +112,9 @@
   <section class="hero hero-slider">
     <div id="hero-carousel" class="carousel slide" data-ride="">
       <ol class="carousel-indicators">
-        <li data-target="#slide0" data-slide-to="0" class="active"></li>
-        <li data-target="#slide1" data-slide-to="1"></li>
-        <li data-target="#slide2" data-slide-to="2"></li>
+        <li data-target="#hero-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#hero-carousel" data-slide-to="1"></li>
+        <li data-target="#hero-carousel" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active" style="background-image:url(images/polishing-diamond-ring.jpg); background-position:center bottom;">
@@ -129,11 +137,11 @@
         </div>
       </div>
       <a href="#hero-carousel" class="left carousel-control hidden-xs" role="button" data-slide="prev">
-        <span class="left-arrow" aria-hidden="true"></span>
+        <span class="arrow left-arrow" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
       <a href="#hero-carousel" class="right carousel-control hidden-xs" role="button" data-slide="next">
-        <span class="right-arrow" aria-hidden="true"></span>
+        <span class="arrow right-arrow" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
     </div>
@@ -150,17 +158,19 @@
       <div class="image-links">
         <div class="row">
           <div class="col-sm-8 col-md-9">
-            <a href="#" class="featured-product">
-              <img src="images/yellow-diamond-ring.jpg" class="img-responsive center-block" alt="" />
-              <div class="caption">
-                <h1><a href="#">Featured Item Description Here</a></h1>
+            <a href="#" class="featured-block product">
+              <div class="featured-block-img">
+                <img src="images/yellow-diamond-ring.jpg" class="img-responsive center-block" alt="" />
+                <div class="caption">
+                  <h1>Featured Item Description Here</h1>
+                </div>
               </div>
               <span class="shadow-gradient"></span>
             </a>
             <div class="row">
               <div class="col-sm-6">
-                <a href="#" class="featured-category">
-                  <div class="featured-category-img">
+                <a href="#" class="featured-block">
+                  <div class="featured-block-img">
                     <img src="images/monitors-on-display.jpg" class="img-responsive center-block" alt="" />
                     <div class="caption">
                       <h1>Electronics</h1>
@@ -170,8 +180,8 @@
                 </a>
               </div>
               <div class="col-sm-6">
-                <a href="#" class="featured-category">
-                  <div class="featured-category-img">
+                <a href="#" class="featured-block">
+                  <div class="featured-block-img">
                     <img src="images/woman-holding-handbag.jpg" class="img-responsive center-block" alt="" />
                     <div class="caption">
                       <h1>Handbags</h1>
@@ -183,8 +193,8 @@
             </div>
             <div class="row">
               <div class="col-sm-6">
-                <a href="#" class="featured-category">
-                  <div class="featured-category-img">
+                <a href="#" class="featured-block">
+                  <div class="featured-block-img">
                     <img src="images/rows-of-guns.jpg" class="img-responsive center-block" alt="" />
                     <div class="caption">
                       <h1>Firearms</h1>
@@ -194,8 +204,8 @@
                 </a>
               </div>
               <div class="col-sm-6">
-                <a href="#" class="featured-category">
-                  <div class="featured-category-img">
+                <a href="#" class="featured-block">
+                  <div class="featured-block-img">
                     <img src="images/socket-set.jpg" class="img-responsive center-block" alt="" />
                     <div class="caption">
                       <h1>Tools</h1>
@@ -207,11 +217,11 @@
             </div>
           </div>
           <div class="col-sm-4 col-md-3">
-            <a class="side-ad-wrapper">
-              <div class="side-ad">
+            <a href="#" class="side-ad">
+              <div class="side-ad-img">
                 <img src="images/diamond-rings-vertical.jpg" class="img-responsive center-block" alt="" />
                 <div class="caption">
-                  <h2>Fall Jewelry Sale<br /><span>20%</span> off all fall themed jewelry in stock</h2>
+                  <h2>Fall Jewelry Sale<br /><span>20%</span>off all fall themed jewelry in stock</h2>
                 </div>
               </div>
             </a>
