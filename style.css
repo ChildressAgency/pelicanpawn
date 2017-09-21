@@ -592,6 +592,11 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   color:#000;
 }
 
+.pawn-process>.col-sm-5,
+.pawn-process>.col-sm-7{
+  padding-top:40px;
+}
+
 
 @media (max-width:767px){
   .masthead .location-phone>a{
@@ -624,6 +629,17 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   .contact-location .contact-phone{
     text-align:right;
     margin-top:40px;
+  }
+  .container-sm-height{
+    display:table;
+  }
+  .row-sm-height{
+    display:table-row;
+  }
+  .col-sm-height{
+    display:table-cell;
+    float:none;
+    vertical-align:middle;
   }
 }
 @media (min-width:768px) and (max-width:991px){
