@@ -289,6 +289,37 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 	}
 }
 
+add_action('init', 'pelicanpawn_create_post_type');
+function pelicanpawn_create_post_type(){
+  $location_labels = array(
+    'name' => 'Locations',
+    'singular_name' => 'Location',
+    'menu_name' => 'Locations',
+    'add_new_item' => 'Add New Location',
+    'search_items' => 'Search Locations',
+    'edit_item' => 'Edit Location',
+    'view_item' => 'View Location',
+    'all_items' => 'All Locations',
+    'new_item' => 'New Location',
+    'not_found' => 'Location Not Found'
+  );
+  $location_args = array(
+    'labels' => $location_labels,
+    'capability_type' => 'post',
+    'public' => true,
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-location-alt',
+    'query_var' => 'pelicanpawn_locations',
+    'supports' => array(
+      'title',
+      'editor',
+      'custom_fields',
+      'revisions'
+    )
+  );
+  register_post_type('pelicanpawn_locations', $location_args);
+}
+
 add_action('acf/init', 'pelicanpawn_acf_init');
 function pelicanpawn_acf_init(){
 	acf_update_setting('google_api_key', get_field('google_maps_api_key', 'option'));
