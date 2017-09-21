@@ -34,6 +34,28 @@ h2{
   margin-top:0;
 }
 
+img.alignnone,
+img.aligncenter{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:25px auto;
+}
+img.alignleft{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:25px 25px 25px 0px;
+  float:left;
+}
+img.alignright{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:25px 0px 25px 25px;
+  float:right;
+}
+
 .btn-main{
   color:#fff;
   background-color:#000;
@@ -570,6 +592,12 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   #cashLoans{
     height:auto;
     min-height:350px;
+  }
+}
+@media (min-width:768px){
+  #mainContent ul{
+    column-count:2;
+    column-gap:40px;
   }
 }
 @media (min-width:768px) and (max-width:991px){
