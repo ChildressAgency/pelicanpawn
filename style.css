@@ -153,8 +153,18 @@ h2{
 #header-nav .nav>li>a:hover,
 #header-nav .nav>li>a:focus{
   background-color:transparent;
-  color:#ffe00b;
   text-decoration:none;
+  color:#fff;
+  font-weight:900;
+}
+#header-nav .nav>li>a:after{
+  display:block;
+  content:attr(title);
+  font-weight:900;
+  height:1px;
+  color:transparent;
+  overflow:hidden;
+  visibility:hidden;
 }
 .navbar-toggle{
   border-color:#fff;
@@ -237,7 +247,7 @@ h2{
   left:20px;
 }
 
-#hp-main{
+#hp-main, #main{
   padding-top:40px;
   padding-bottom:40px;
 }
@@ -475,6 +485,68 @@ footer p{
   color:#fff;
   text-decoration:underline;
 }
+
+.page-intro{
+  text-align:center;
+  margin-bottom:40px;
+}
+.blog-loop{
+  margin-top:40px;
+}
+.blog-summary p{
+  display:inline;
+}
+.read-more{
+  color:#456e1d;
+  font-style:italic;
+  font-weight:500;
+}
+.read-more:hover,
+.read-more:focus{
+  color:#456e1d;
+  text-decoration:underline;
+}
+
+/*
+Default style for WP-PageNavi plugin
+
+http://wordpress.org/extend/plugins/wp-pagenavi/
+*/
+
+.wp-pagenavi {
+  clear: both;
+}
+.wp-pagenavi a,
+.wp-pagenavi span {
+  text-decoration: none;
+  border: 1px solid #BFBFBF;
+  padding: 3px 5px;
+  margin: 2px;
+}
+.wp-pagenavi a:hover,
+.wp-pagenavi span.current {
+  border-color: #000;
+}
+.wp-pagenavi span.current {
+  font-weight: bold;
+}
+/* end */
+.wp-pagenavi{
+  margin-top:60px;
+  text-align:center;
+}
+.wp-pagenavi a,
+.wp-pagenavi span{
+  color:#fff;
+  background-color:#000;
+  border:none;
+  padding:5px 10px;
+}
+.wp-pagenavi a:hover,
+.wp-pagenavi span.current{
+  background-color:rgba(0,0,0,.5);
+}
+
 
 
 @media (max-width:767px){
