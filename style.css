@@ -603,6 +603,13 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   padding-bottom:80px;
 }
 
+.virtual-tour.embed-responsive-4by3{
+  padding-bottom:50%;
+}
+.map{
+  text-align:center;
+}
+
 
 @media (max-width:767px){
   .masthead .location-phone>a{
