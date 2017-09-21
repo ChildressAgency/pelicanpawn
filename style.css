@@ -27,7 +27,6 @@ body{
 h1{
   font-size:40px;
   margin-top:0;
-  margin-bottom:0;
   font-weight:700;
 }
 h2{
@@ -44,6 +43,9 @@ h2{
   font-size:20px;
   -webkit-transition:all .3s ease;
   transition:all .3s ease;
+}
+.btn-main.btn-clear{
+  background-color:transparent;
 }
 .btn-main:hover,
 .btn-main:focus{
@@ -336,6 +338,142 @@ h2{
 #cashLoans .btn-main{
   padding:2px 50px;
   margin-top:20px;
+}
+
+#hp-services{
+  padding-top:40px;
+  padding-bottom:40px;
+  text-align:center;
+}
+#hp-services .service-card{
+  padding-top:115px;
+  margin-top:25px;
+  position:relative;
+}
+.service-card>h1{
+  margin-bottom:10px;
+}
+#hp-services .service-card:before{
+  content:"";
+  position:absolute;
+  background-image:url(images/sprites.png);
+  background-repeat:no-repeat;
+  top:0;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+#hp-services .service-card.we-pawn:before{
+  background-position:0px -40px;
+  height:88px;
+  width:187px;
+}
+#hp-services .service-card.we-buy:before{
+  background-position:0px -133px;
+  height:71px;
+  width:155px;
+  top:15px;
+}
+#hp-services .service-card.we-sell:before{
+  background-position:-194px 0px;
+  height:97px;
+  width:97px;
+}
+
+#locations{
+  padding-top:40px;
+  padding-bottom:40px;
+  text-align:center;
+}
+#locations .location-row>li>img{
+  width:100%;
+  height:auto;
+}
+#locations .lSSlideOuter{
+  margin-top:25px;
+}
+#locations .location-row>li>.caption{
+  color:#fff;
+  background-color:#456e1d;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.lSAction>a{
+  background-image:url(images/sprites.png);
+  opacity:1;
+  height:35px;
+  width:35px;
+}
+.lSAction>.lSPrev{
+  background-position:0px 0px ;
+}
+.lSAction>.lSNext{
+  background-position:-47px 0px;
+}
+
+#about{
+  padding-top:40px;
+  padding-bottom:40px;
+  text-align:center;
+}
+
+footer{
+  padding-top:40px;
+  padding-bottom:40px;
+  background-color:#456e1d;
+  color:#fff;
+}
+footer .social{
+  text-align:center;
+  margin-top:15px;
+}
+footer .social>a{
+  color:#fff;
+  font-size:32px;
+}
+footer .social>a+a{
+  margin-left:30px;
+}
+footer .social>a:hover,
+footer .social>a:focus{
+  color:#ffe00b;
+}
+footer p{
+  font-size:14px;
+}
+.footer-location{
+  border-bottom:1px solid #fff;
+  padding-top:15px;
+}
+.footer-location:last-child{
+  border-bottom:none;
+}
+.footer-nav>li>a{
+  color:#fff;
+  font-size:18px;
+  text-transform:uppercase;
+  font-weight:700;
+}
+.footer-nav>li>a:hover,
+.footer-nav>li>a:focus{
+  color:#ffe00b;
+  text-decoration:none;
+}
+.copyright{
+  margin-top:25px;
+}
+.copyright>p{
+  text-align:center;
+  margin-bottom:0;
+}
+.copyright>p>a{
+  color:#fff;
+}
+.copyright>p>a:hover,
+.copyright>p>a:focus{
+  color:#fff;
+  text-decoration:underline;
 }
 
 
