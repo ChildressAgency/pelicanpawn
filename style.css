@@ -610,6 +610,21 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   text-align:center;
 }
 
+#services-list .image-side{
+  height:430px;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+#services-list .text-side{
+  margin:15px;
+}
+
+#visitShop{
+  text-align:center;
+  padding-top:60px;
+  padding-bottom:60px;
+}
+
 
 @media (max-width:767px){
   .masthead .location-phone>a{
@@ -653,6 +668,12 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
     display:table-cell;
     float:none;
     vertical-align:middle;
+  }
+  #services-list>.container-fluid{
+    padding-left:0;
+    padding-right:0;
+    margin-left:0;
+    margin-right:0;
   }
 }
 @media (min-width:768px) and (max-width:991px){
