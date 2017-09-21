@@ -597,6 +597,12 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   padding-top:40px;
 }
 
+#shopOnline{
+  text-align:center;
+  padding-top:40px;
+  padding-bottom:80px;
+}
+
 
 @media (max-width:767px){
   .masthead .location-phone>a{
