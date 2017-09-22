@@ -3,16 +3,16 @@
     <section class="hero hero-slider">
       <div id="hero-carousel" class="carousel slide" data-ride="">
 
-        <?php $slide_count = count(get_rows('hero_slides')); ?>
+        <?php $slide_count = count(get_field('hero_slides')); ?>
         <ol class="carousel-indicators">
-          <?php for($i = 0; $i <= $slide_count; $i++): ?>
+          <?php for($i = 0; $i < $slide_count; $i++): ?>
             <li data-target="#hero-carousel" data-slide-to="<?php echo $i; ?>"<?php if($i==0){ echo ' class="active"'; } ?>></li>
           <?php endfor; ?>
         </ol>
 
         <div class="carousel-inner" role="listbox">
 
-          <?php $c==1; while(have_rows('hero_slides')): the_row(); ?>
+          <?php $c=1; while(have_rows('hero_slides')): the_row(); ?>
             <div class="item<?php if($c==1){ echo ' active'; } ?>" style="background-image:url(<?php the_sub_field('slide_image'); ?>); <?php the_sub_field('slide_image_css'); ?>">
               <div class="carousel-caption">
                 <h1><a href="<?php the_sub_field('slide_link'); ?>"><?php the_sub_field('slide_title'); ?></a></h1>
@@ -162,7 +162,7 @@
     <ul class="location-row">
       <?php 
         $locations = new WP_Query(array(
-          'post_type' => 'pelicanpawn_locations',
+          'post_type' => 'pelicanpawn_locs',
           'post_status' => 'publish',
           'posts_per_page' => -1
         ));
@@ -176,7 +176,7 @@
               <a href="<?php the_permalink(); ?>" class="btn-main btn-clear">Take a Tour</a>
             </div>
           </li>
-      <?php endwhile; endif; ?>
+      <?php endwhile; endif; wp_reset_postdata(); ?>
     </ul>
   </section>
   <section id="about">

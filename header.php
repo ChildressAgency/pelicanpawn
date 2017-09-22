@@ -50,7 +50,7 @@
         <div class="col-sm-4">
           <?php 
             $locations = new WP_Query(array(
-              'post_type' => 'pelicanpawn_locations',
+              'post_type' => 'pelicanpawn_locs',
               'post_status' => 'publish',
               'posts_per_page' => -1
             ));

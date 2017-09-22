@@ -59,7 +59,7 @@ function pelicanpawn_scripts(){
   
   wp_enqueue_script('bootstrap-script');
   wp_enqueue_script('fontawesome');
-  if(is_front_page()){
+  if(is_front_page() || is_page('locations')){
     wp_enqueue_script('jquery-libs');
   }
 	wp_enqueue_script('google-maps');
@@ -75,7 +75,7 @@ function pelicanpawn_styles(){
   
   wp_enqueue_style('bootstrap-css');
   wp_enqueue_style('google-fonts');
-  if(is_front_page()){
+  if(is_front_page() || is_page('locations')){
     wp_enqueue_style('lightslider-css');
   }
   wp_enqueue_style('pelicanpawn');
@@ -311,7 +311,7 @@ function pelicanpawn_create_post_type(){
     'public' => true,
     'menu_position' => 5,
     'menu_icon' => 'dashicons-location-alt',
-    'query_var' => 'pelicanpawn_locations',
+    'query_var' => 'pelicanpawn_locs',
     'supports' => array(
       'title',
       'editor',
@@ -319,7 +319,7 @@ function pelicanpawn_create_post_type(){
       'revisions'
     )
   );
-  register_post_type('pelicanpawn_locations', $location_args);
+  register_post_type('pelicanpawn_locs', $location_args);
 }
 
 add_action('acf/init', 'pelicanpawn_acf_init');

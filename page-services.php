@@ -11,10 +11,10 @@
   </main>
   <section id="services-list">
     <div class="container-fluid container-sm-height">
-      <?php if(have_rows('services')): $i=0; while(have_rows('services')): the_row(); ?>
+      <?php if(have_rows('services')): $i=1; while(have_rows('services')): the_row(); ?>
         <div class="row row-sm-height">
-          <div class="col-sm-6 col-sm-height image-side" style="background-image:url(<?php the_sub_field('service_image'); ?>); <?php the_sub_field('service_image_css'); ?>"></div>
-          <div class="col-sm-6 col-sm-height">
+          <div class="col-sm-6 col-sm-height image-side<?php if($i%2==0){ echo ' col-sm-push-6'; } ?>" style="background-image:url(<?php the_sub_field('service_image'); ?>); <?php the_sub_field('service_image_css'); ?>"></div>
+          <div class="col-sm-6 col-sm-height<?php if($i%2==0){ echo ' col-sm-pull-6'; } ?>">
             <div class="text-side">
               <h1><?php the_sub_field('service_title'); ?></h1>
               <?php if(get_sub_field('service_subtitle')): ?>
@@ -24,7 +24,7 @@
             </div>
           </div>
         </div>
-      <?php endwhile; endif; ?>
+      <?php $i++; endwhile; endif; ?>
     </div>
   </section>
   <section id="visitShop">

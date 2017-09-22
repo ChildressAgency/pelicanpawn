@@ -17,7 +17,7 @@
             <img src="<?php the_sub_field('step_image'); ?>" class="img-responsive center-block" alt="" />
           </div>
           <div class="col-sm-7 col-sm-height">
-            <?php the_field('step_content'); ?>
+            <?php the_sub_field('step_content'); ?>
           </div>
         </div>
       <?php endwhile; endif; ?>
