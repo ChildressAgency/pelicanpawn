@@ -624,6 +624,26 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   padding-top:60px;
   padding-bottom:60px;
 }
+.location-nav>a{
+  font-size:24px;
+  color:#000;
+}
+.location-nav>a:hover,
+.location-nav>a:focus{
+  opacity:.5;
+}
+.location-nav>.next-location{
+  margin-left:25px;
+}
+
+.acf-map{
+  width:100%;
+  height:550px;
+}
+.acf-map img{
+  max-width:inherit !important;
+}
+
 
 
 @media (max-width:767px){
