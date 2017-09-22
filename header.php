@@ -89,7 +89,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li<?php if(is_page('services')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('services'); ?>" title="Services">Services</a></li>
           <li<?php if(is_page('locations') || is_singular('location')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('locations'); ?>" title="Locations">Locations</a></li>
-          <li><a href="<?php the_field('main_shop_page_link'); ?>" title="Shop">Shop</a></li>
+          <li><a href="<?php the_field('main_shop_page_link', 'option'); ?>" title="Shop">Shop</a></li>
           <li<?php if(is_home()){ echo ' class="active"'; } ?>><a href="<?php echo home_url('blog'); ?>" title="blog">Blog</a></li>
           <li<?php if(is_page('contact')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('contact'); ?>" title="Contact">Contact</a></li>
         </ul>
