@@ -67,8 +67,8 @@
         <div class="col-sm-4">
           <div class="quick-links">
             <a href="<?php echo home_url('how-to-pawn'); ?>">How to Pawn</a>
-            <a href="<?php echo home_url('careers'); ?>">Careers</a>
-            <a href="<?php echo home_url('privacy-policy'); ?>">Privacy Policy</a>
+            <a href="<?php the_field('check_my_loan_link', 'option'); ?>">Check My Loan</a>
+            <a href="<?php the_field('my_account_link', 'option'); ?>">My Account</a>
           </div>
         </div>
       </div>
@@ -119,8 +119,8 @@
           <li>
             <div class="quick-links">
               <a href="<?php echo home_url('how-to-pawn'); ?>">How to Pawn</a>
-              <a href="<?php echo home_url('careers'); ?>">Careers</a>
-              <a href="<?php echo home_url('privacy-policy'); ?>">Privacy Policy</a>
+              <a href="<?php the_field('check_my_loan_link', 'option'); ?>">Check My Loan</a>
+              <a href="<?php the_field('my_account_link', 'option'); ?>">My Account</a>
             </div>
           </li>
         </ul>

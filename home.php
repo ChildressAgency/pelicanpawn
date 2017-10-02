@@ -19,6 +19,9 @@
                 if(has_post_thumbnail()){
                   the_post_thumbnail('full', array('class' => 'img-responsive center-block', 'alt' => ''));
                 }
+                else{
+                  echo '<img src="' . get_stylesheet_directory_uri() . '/images/logo-placeholder.png" class="img-responsive center-block" alt="" />';
+                }
               ?>
             </div>
             <div class="col-sm-7">

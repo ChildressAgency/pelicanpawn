@@ -12,6 +12,8 @@
             <li><a href="<?php echo home_url('blog'); ?>">Blog</a></li>
             <li><a href="<?php echo home_url('contact'); ?>">Contact</a></li>
             <li><a href="<?php echo home_url('how-to-pawn'); ?>">How To Pawn</a></li>
+            <li><a href="<?php the_field('check_my_loan_link', 'option'); ?>">Check My Loan</a></li>
+            <li><a href="<?php the_field('my_account_link', 'option'); ?>">My Account</a></li>
             <li><a href="<?php echo home_url('careers'); ?>">Careers</a></li>
             <li><a href="<?php echo home_url('privacy-policy'); ?>">Privacy Policy</a></li>
           </ul>

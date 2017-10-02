@@ -105,6 +105,30 @@
                 </a>
               </div>
             </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <a href="<?php the_field('featured_category_5_link'); ?>" class="featured-block">
+                  <div class="featured-block-img">
+                    <img src="<?php the_field('featured_category_5_image'); ?>" class="img-responsive center-block" alt="" />
+                    <div class="caption">
+                      <h1><?php the_field('featured_category_5_title'); ?></h1>
+                    </div>
+                  </div>
+                  <span class="overlay"></span>
+                </a>
+              </div>
+              <div class="col-sm-6">
+                <a href="<?php the_field('featured_category_6_link'); ?>" class="featured-block">
+                  <div class="featured-block-img">
+                    <img src="<?php the_field('featured_category_6_image'); ?>" class="img-responsive center-block" alt="" />
+                    <div class="caption">
+                      <h1><?php the_field('featured_category_6_title'); ?></h1>
+                    </div>
+                  </div>
+                  <span class="overlay"></span>
+                </a>
+              </div>
+            </div>
           </div>
           <div class="col-sm-4 col-md-3">
             <a href="<?php the_field('side_ad_link'); ?>" class="side-ad">
