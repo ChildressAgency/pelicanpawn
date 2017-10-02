@@ -600,7 +600,7 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
 #shopOnline{
   text-align:center;
   padding-top:40px;
-  padding-bottom:80px;
+  padding-bottom:40px;
 }
 
 .virtual-tour.embed-responsive-4by3{
@@ -643,6 +643,12 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
 }
 .acf-map img{
   max-width:inherit !important;
+}
+
+#storeHours{
+  margin-top:40px;
+  margin-bottom:80px;
+  text-align:center;
 }
 
 

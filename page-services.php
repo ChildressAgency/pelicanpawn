@@ -28,8 +28,10 @@
     </div>
   </section>
   <section id="visitShop">
-    <h1>Visit us in person or shop now!</h1>
+    <h1>Visit us in person<?php echo get_field('main_shop_page_link', 'option') ? ' or shop now' : ''; ?>!</h1>
     <a href="<?php echo home_url('locations'); ?>" class="btn-main">Locations</a>
-    <a href="<?php the_field('main_shop_page_link', 'option'); ?>" class="btn-main">Online Shop</a>
+    <?php if(get_field('main_shop_page_link', 'option')): ?>
+      <a href="<?php the_field('main_shop_page_link', 'option'); ?>" class="btn-main">Online Shop</a>
+    <?php endif; ?>
   </section>
 <?php get_footer(); ?>

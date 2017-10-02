@@ -27,8 +27,10 @@
   </section>
   <section id="shopOnline">
     <div class="container">
-      <h1>Shop our stores online!</h1>
-      <a href="<?php the_field('main_shop_page_link'); ?>" class="btn-main">Online Shop</a>
+      <?php if(get_field('main_shop_page_link', 'option')): ?>
+        <h1>Shop our stores online!</h1>
+        <a href="<?php the_field('main_shop_page_link', 'option'); ?>" class="btn-main">Online Shop</a>
+      <?php endif; ?>
     </div>
   </section>
 <?php get_footer(); ?>

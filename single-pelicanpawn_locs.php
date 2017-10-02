@@ -29,9 +29,15 @@
                 </div>
             <?php endif; ?>
           </div>
-          <div id="shopOnline">
-            <h1>Shop this store online!</h1>
-            <a href="<?php the_field('store_shop_link'); ?>" class="btn-main">Online Shop</a>
+          <?php if(get_field('store_shop_link')): ?>
+            <div id="shopOnline">
+              <h1>Shop this store online!</h1>
+              <a href="<?php the_field('store_shop_link'); ?>" class="btn-main">Online Shop</a>
+            </div>
+          <?php endif; ?>
+          <div id='storeHours'>
+            <h1>Store Hours</h1>
+            <?php the_field('store_hours'); ?>
           </div>
         </section>
       <?php endwhile; endif; ?>

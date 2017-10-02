@@ -67,8 +67,12 @@
         <div class="col-sm-4">
           <div class="quick-links">
             <a href="<?php echo home_url('how-to-pawn'); ?>">How to Pawn</a>
-            <a href="<?php the_field('check_my_loan_link', 'option'); ?>">Check My Loan</a>
-            <a href="<?php the_field('my_account_link', 'option'); ?>">My Account</a>
+            <?php if(get_field('check_my_loan_link', 'option')): ?>
+              <a href="<?php the_field('check_my_loan_link', 'option'); ?>">Check My Loan</a>
+            <?php endif; ?>
+            <?php if(get_field('my_account_link', 'option')): ?>
+              <a href="<?php the_field('my_account_link', 'option'); ?>">My Account</a>
+            <?php endif; ?>
           </div>
         </div>
       </div>
@@ -89,7 +93,9 @@
         <ul class="nav navbar-nav navbar-right">
           <li<?php if(is_page('services')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('services'); ?>" title="Services">Services</a></li>
           <li<?php if(is_page('locations') || is_singular('location')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('locations'); ?>" title="Locations">Locations</a></li>
-          <li><a href="<?php the_field('main_shop_page_link', 'option'); ?>" title="Shop">Shop</a></li>
+          <?php if(get_field('main_shop_page_link', 'option')): ?>
+            <li><a href="<?php the_field('main_shop_page_link', 'option'); ?>" title="Shop">Shop</a></li>
+          <?php endif; ?>
           <li<?php if(is_home()){ echo ' class="active"'; } ?>><a href="<?php echo home_url('blog'); ?>" title="blog">Blog</a></li>
           <li<?php if(is_page('contact')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('contact'); ?>" title="Contact">Contact</a></li>
         </ul>
@@ -119,8 +125,12 @@
           <li>
             <div class="quick-links">
               <a href="<?php echo home_url('how-to-pawn'); ?>">How to Pawn</a>
-              <a href="<?php the_field('check_my_loan_link', 'option'); ?>">Check My Loan</a>
-              <a href="<?php the_field('my_account_link', 'option'); ?>">My Account</a>
+              <?php if(get_field('check_my_loan_link', 'option')): ?>
+                <a href="<?php the_field('check_my_loan_link', 'option'); ?>">Check My Loan</a>
+              <?php endif; ?>
+              <?php if(get_field('my_account_link', 'option')): ?>
+                <a href="<?php the_field('my_account_link', 'option'); ?>">My Account</a>
+              <?php endif; ?>
             </div>
           </li>
         </ul>

@@ -8,18 +8,23 @@
           <ul class="footer-nav list-unstyled">
             <li><a href="<?php echo home_url('services'); ?>">Services</a></li>
             <li><a href="<?php echo home_url('locations'); ?>">Locations</a></li>
-            <li><a href="<?php the_field('main_shop_page_link'); ?>">Shop</a></li>
+            <?php if(get_field('main_shop_page_link', 'option')): ?>
+              <li><a href="<?php the_field('main_shop_page_link', 'option'); ?>">Shop</a></li>
+            <?php endif; ?>
             <li><a href="<?php echo home_url('blog'); ?>">Blog</a></li>
             <li><a href="<?php echo home_url('contact'); ?>">Contact</a></li>
             <li><a href="<?php echo home_url('how-to-pawn'); ?>">How To Pawn</a></li>
-            <li><a href="<?php the_field('check_my_loan_link', 'option'); ?>">Check My Loan</a></li>
-            <li><a href="<?php the_field('my_account_link', 'option'); ?>">My Account</a></li>
+            <?php if(get_field('check_my_loan_link', 'option')): ?>
+              <li><a href="<?php the_field('check_my_loan_link', 'option'); ?>">Check My Loan</a></li>
+            <?php endif; ?>
+            <?php if(get_field('my_account_link', 'option')): ?>
+              <li><a href="<?php the_field('my_account_link', 'option'); ?>">My Account</a></li>
+            <?php endif; ?>
             <li><a href="<?php echo home_url('careers'); ?>">Careers</a></li>
             <li><a href="<?php echo home_url('privacy-policy'); ?>">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="col-sm-5">
-          <p>All locations open Mon-Sat 9am-8pm</p>
           <?php
             $locations = new WP_Query(array(
               'post_type' => 'pelicanpawn_locs',
