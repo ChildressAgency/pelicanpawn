@@ -21,13 +21,9 @@
           <div class="map">
             <h1>Find us on the map</h1>
             <p><?php the_field('street_address'); ?><br /><?php the_field('city_state_zip'); ?><br /><?php the_field('phone_number'); ?></p>
-            <?php
-              $location = get_field('map_location');
-              if(!empty($location)): ?>
-                <div class="acf-map">
-                  <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-                </div>
-            <?php endif; ?>
+            <div class="embed-responsive embed-responsive-16by9">
+              <?php the_field('map_embed_code'); ?>
+            </div>
           </div>
           <?php if(get_field('store_shop_link')): ?>
             <div id="shopOnline">
