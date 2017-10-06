@@ -20,7 +20,7 @@
           <?php endif; ?>
           <div class="map">
             <h1>Find us on the map</h1>
-            <p><?php the_field('street_address'); ?><br /><?php the_field('city_state_zip'); ?><br /><?php the_field('phone_number'); ?></p>
+            <p><?php the_field('street_address'); ?><br /><?php the_field('city_state_zip'); ?><br /><?php the_field('phone_number'); ?><br /><?php the_field('store_email'); ?></p>
             <div class="embed-responsive embed-responsive-16by9">
               <?php the_field('map_embed_code'); ?>
             </div>
