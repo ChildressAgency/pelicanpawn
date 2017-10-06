@@ -22,7 +22,7 @@
                 <p><?php the_field('street_address'); ?><br /><?php the_field('city_state_zip'); ?></p>
               </div>
               <div class="col-sm-6">
-                <p class="contact-phone"><a href="tel:<?php the_field('phone_number'); ?>"><?php the_field('phone_number'); ?></a></p>
+                <p class="contact-phone"><a href="tel:<?php the_field('phone_number'); ?>"><?php the_field('phone_number'); ?></a><?php echo get_field('store_email') ? '<br /><a href="mailto:' . get_field('store_email') . '">' . get_field('store_email') . '</a>' : ''; ?></p>
               </div>
             </div>
         <?php endwhile; endif; ?>
