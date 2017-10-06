@@ -96,6 +96,7 @@
           <?php if(get_field('main_shop_page_link', 'option')): ?>
             <li><a href="<?php the_field('main_shop_page_link', 'option'); ?>" title="Shop">Shop</a></li>
           <?php endif; ?>
+          <li<?php if(is_page('faqs')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('faqs'); ?>" title="faqs">FAQs</a></li>
           <li<?php if(is_home()){ echo ' class="active"'; } ?>><a href="<?php echo home_url('blog'); ?>" title="blog">Blog</a></li>
           <li<?php if(is_page('contact')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('contact'); ?>" title="Contact">Contact</a></li>
         </ul>
