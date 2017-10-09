@@ -1,7 +1,7 @@
 <?php get_header(); ?>
   <?php if(have_rows('hero_slides')): ?>
     <section class="hero hero-slider">
-      <div id="hero-carousel" class="carousel slide" data-ride="">
+      <div id="hero-carousel" class="carousel slide" data-ride="carousel">
 
         <?php $slide_count = count(get_field('hero_slides')); ?>
         <ol class="carousel-indicators">

@@ -9,6 +9,24 @@
 
   <meta http-equiv="cache-control" content="public">
   <meta http-equiv="cache-control" content="private">
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
   <title>Pelican Pawn</title>
 
@@ -25,6 +43,15 @@
       }
     </style>
   <![endif]-->
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99227980-33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99227980-33');
+</script>
 </head>
 
 <body>
@@ -66,7 +93,7 @@
         </div>
         <div class="col-sm-4">
           <div class="quick-links">
-            <a href="<?php echo home_url('how-to-pawn'); ?>">How to Pawn</a>
+            <!--<a href="<?php echo home_url('how-to-pawn'); ?>">How to Pawn</a>-->
             <?php if(get_field('check_my_loan_link', 'option')): ?>
               <a href="<?php the_field('check_my_loan_link', 'option'); ?>">Check My Loan</a>
             <?php endif; ?>
@@ -98,6 +125,7 @@
           <?php endif; ?>
           <li<?php if(is_page('faqs')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('faqs'); ?>" title="faqs">FAQs</a></li>
           <li<?php if(is_home()){ echo ' class="active"'; } ?>><a href="<?php echo home_url('blog'); ?>" title="blog">Blog</a></li>
+          <li<?php if(is_page('how-to-pawn')){ echo ' class="active"'; } ?>><a href="<?Php echo home_url('how-to-pawn'); ?>" title="How to Pawn">How To Pawn</a></li>
           <li<?php if(is_page('contact')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('contact'); ?>" title="Contact">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right visible-xs-block">
