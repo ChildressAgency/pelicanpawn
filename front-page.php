@@ -16,6 +16,7 @@
             <div class="item<?php if($c==1){ echo ' active'; } ?>" style="background-image:url(<?php the_sub_field('slide_image'); ?>); <?php the_sub_field('slide_image_css'); ?>">
               <div class="carousel-caption">
                 <h1><a href="<?php the_sub_field('slide_link'); ?>"><?php the_sub_field('slide_title'); ?></a></h1>
+                <p><?php the_sub_field('slide_subtitle'); ?></p>
               </div>
               <span class="shadow-gradient"></span>
             </div>

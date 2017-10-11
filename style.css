@@ -209,7 +209,11 @@ img.alignright{
 }
 #hero-carousel .carousel-caption h1>a{
   color:#fff;
-  font-weight:400;
+  font-weight:700;
+}
+#hero-carousel .carousel-caption p{
+  font-size:20px;
+  text-transform:uppercase;
 }
 #hero-carousel .carousel-indicators{
   bottom:0;
