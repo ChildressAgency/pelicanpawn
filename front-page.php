@@ -58,78 +58,27 @@
               </div>
               <span class="shadow-gradient"></span>
             </a>
-            <div class="row">
-              <div class="col-sm-6">
-                <a href="<?php the_field('featured_category_1_link'); ?>" class="featured-block">
-                  <div class="featured-block-img">
-                    <img src="<?php the_field('featured_category_1_image'); ?>" class="img-responsive center-block" alt="" />
-                    <div class="caption">
-                      <h1><?php the_field('featured_category_1_title'); ?></h1>
-                    </div>
+
+            <?php if(have_rows('featured_categories')): ?>
+              <div class="row">
+                <?php $fc = 0; while(have_rows('featured_categories')): the_row(); ?>
+                  <?php if($fc % 2 == 0){ echo '<div class="clearfix"></div>'; } ?>
+                  <div class="col-sm-6">
+                    <a href="<?php the_sub_field('featured_category_link'); ?>" class="featured-block">
+                      <div class="featured-block-img">
+                        <img src="<?php the_sub_field('featured_category_image'); ?>" class="img-responsive center-block" alt="" />
+                        <div class="caption">
+                          <h1><?php the_sub_field('featured_category_title'); ?></h1>
+                        </div>
+                        <span class="click-here">(click here to view inventory)</span>
+                      </div>
+                      <span class="overlay"></span>
+                    </a>
                   </div>
-                  <span class="overlay"></span>
-                </a>
+                <?php $fc++; endwhile; ?>
               </div>
-              <div class="col-sm-6">
-                <a href="<?php the_field('featured_category_2_link'); ?>" class="featured-block">
-                  <div class="featured-block-img">
-                    <img src="<?php the_field('featured_category_2_image'); ?>" class="img-responsive center-block" alt="" />
-                    <div class="caption">
-                      <h1><?php the_field('featured_category_2_title'); ?></h1>
-                    </div>
-                  </div>
-                  <span class="overlay"></span>
-                </a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <a href="<?php the_field('featured_category_3_link'); ?>" class="featured-block">
-                  <div class="featured-block-img">
-                    <img src="<?php the_field('featured_category_3_image'); ?>" class="img-responsive center-block" alt="" />
-                    <div class="caption">
-                      <h1><?php the_field('featured_category_3_title'); ?></h1>
-                    </div>
-                  </div>
-                  <span class="overlay"></span>
-                </a>
-              </div>
-              <div class="col-sm-6">
-                <a href="<?php the_field('featured_category_4_link'); ?>" class="featured-block">
-                  <div class="featured-block-img">
-                    <img src="<?php the_field('featured_category_4_image'); ?>" class="img-responsive center-block" alt="" />
-                    <div class="caption">
-                      <h1><?php the_field('featured_category_4_title'); ?></h1>
-                    </div>
-                  </div>
-                  <span class="overlay"></span>
-                </a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <a href="<?php the_field('featured_category_5_link'); ?>" class="featured-block">
-                  <div class="featured-block-img">
-                    <img src="<?php the_field('featured_category_5_image'); ?>" class="img-responsive center-block" alt="" />
-                    <div class="caption">
-                      <h1><?php the_field('featured_category_5_title'); ?></h1>
-                    </div>
-                  </div>
-                  <span class="overlay"></span>
-                </a>
-              </div>
-              <div class="col-sm-6">
-                <a href="<?php the_field('featured_category_6_link'); ?>" class="featured-block">
-                  <div class="featured-block-img">
-                    <img src="<?php the_field('featured_category_6_image'); ?>" class="img-responsive center-block" alt="" />
-                    <div class="caption">
-                      <h1><?php the_field('featured_category_6_title'); ?></h1>
-                    </div>
-                  </div>
-                  <span class="overlay"></span>
-                </a>
-              </div>
-            </div>
+            <?php endif; ?>
+
           </div>
           <div class="col-sm-4 col-md-3">
             <a href="<?php the_field('side_ad_link'); ?>" class="side-ad">

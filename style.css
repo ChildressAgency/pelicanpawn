@@ -655,6 +655,15 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   text-align:center;
 }
 
+.click-here{
+  position:absolute;
+  width:100%;
+  bottom:6px;
+  z-index:3;
+  text-align:center;
+  color:#fff;
+  font-size:16px;
+}
 
 
 @media (max-width:767px){
