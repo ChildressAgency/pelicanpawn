@@ -12,7 +12,8 @@
           'posts_per_page' => 4,
           'paged' => $paged
         ));
-        if($blog->have_posts()): while($blog->have_posts()): $blog->the_post(); ?>
+        //if($blog->have_posts()): while($blog->have_posts()): $blog->the_post(); 
+        if(have_posts()): while(have_posts()): the_post(); ?>
           <div class="row blog-loop">
             <div class="col-sm-5">
               <?php 
@@ -20,7 +21,7 @@
                   the_post_thumbnail('full', array('class' => 'img-responsive center-block', 'alt' => ''));
                 }
                 else{
-                  echo '<img src="' . get_stylesheet_directory_uri() . '/images/logo-placeholder.png" class="img-responsive center-block" alt="" />';
+                  echo '<img src="https://pelicanpawn.com/wp-content/uploads/2019/05/2x2PelicanLogo.png" class="img-responsive center-block" alt="" />';
                 }
               ?>
             </div>
@@ -33,7 +34,7 @@
               </div>
             </div>
           </div>
-      <?php endwhile; endif; wp_pagenavi(array('wp_query' => $blog)); ?>
+      <?php endwhile; wp_reset_postdata(); endif; wp_pagenavi(array('wp_query' => $blog)); ?>
     </div>
   </main>
 <?php get_footer(); ?>
