@@ -82,6 +82,7 @@ function pelicanpawn_styles(){
 }
 
 add_theme_support('post-thumbnails');
+add_theme_support('html5', array('comment-form', 'comment-list'));
 
 register_nav_menu( 'header-nav', 'Header Navigation' );
 /**
